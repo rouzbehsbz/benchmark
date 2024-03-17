@@ -120,7 +120,7 @@ fn main() {
 
     if non_ok_statuses != 0 {
         non_ok_statuses_avg_time =
-            non_ok_statuses_sum_time.lock().unwrap().clone() as f32 / ok_statuses as f32;
+            non_ok_statuses_sum_time.lock().unwrap().clone() as f32 / non_ok_statuses as f32;
     }
 
     println!("{} requests sent.", ok_statuses + non_ok_statuses);
